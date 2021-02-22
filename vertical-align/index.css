@@ -1,0 +1,25 @@
+img.top { vertical-align: text-top; }
+img.bottom { vertical-align: text-bottom; }
+img.middle { vertical-align: middle; }
+.box1 {
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
+.box1 .img1 {
+  vertical-align: top;
+}
+.box1 .img2 {
+  vertical-align: bottom;
+}
+.box1 .img3 {
+  vertical-align: middle;
+}
+.box1 .img4 {
+  vertical-align: baseline;
+}
+.box1 .img5 {
+  vertical-align: sub;
+}
+.box1 .img6 {
+  vertical-align: text-top;
+}

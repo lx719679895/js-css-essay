@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--polka-bg);
+}
+
+:root {
+  --orange-color-1: #fead54;
+  --orange-color-2: #ff9e51;
+  --red-color-1: #5f1717;
+  --red-color-2: #f6566d;
+  --red-color-3: #ffe9f0;
+  --yellow-color-1: #fee64d;
+  --polka-bg: radial-gradient(var(--orange-color-2) 20%, transparent 0) 0 0 /
+      30px 30px,
+    radial-gradient(var(--orange-color-2) 20%, transparent 0) 15px 15px / 30px
+      30px,
+    linear-gradient(var(--orange-color-1), var(--orange-color-1)) 0 0 / 100%;
+  --primary-color: var(--yellow-color-1);
+}
+
+.text-stroke {
+  --stroke-width: 5px;
+  position: relative;
+  color: transparent;
+}
+.text-stroke::before, .text-stroke::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: attr(data-text);
+  color: white;
+}
+.text-stroke::before {
+  z-index: 0;
+  -webkit-text-stroke: var(--stroke-width) var(--stroke-color);
+}
+.text-stroke::after {
+  z-index: 1;
+}
+
+.text-stroke-red-1 {
+  --stroke-color: var(--red-color-1);
+}
+
+.stripe-border {
+  --stripe-width: 0.5rem;
+  --stripe-deg: 45deg;
+  --stripe-offset-1: 2px;
+  --stripe-offset-2: 1rem;
+  --stripe-inset: calc(var(--stripe-width) * -1);
+}
+.stripe-border::before {
+  position: absolute;
+  top: var(--stripe-inset);
+  left: var(--stripe-inset);
+  right: var(--stripe-inset);
+  bottom: var(--stripe-inset);
+  content: "";
+  z-index: -1;
+  background: repeating-linear-gradient(var(--stripe-deg), var(--stripe-color-1) 0 var(--stripe-offset-1), var(--stripe-color-2) 0 var(--stripe-offset-2));
+  border-radius: var(--stripe-radius);
+}
+
+.btn {
+  --btn-padding: 0.35rem 1.25rem;
+}
+.btn-3d-stripe {
+  --stripe-color-1: var(--red-color-1);
+  --stripe-color-2: var(--red-color-2);
+  --btn-bg-2: var(--red-color-3);
+  --stripe-radius: 30px;
+  border: 3px solid var(--stripe-color-1);
+  box-shadow: 0 0 0 6px var(--btn-bg-2), 0 0 0 9px var(--stripe-color-1);
+}
+.btn-3d-stripe .stripe-border {
+  position: absolute;
+  top: 0.06rem;
+  left: 0.03rem;
+  width: calc(100% + 9px);
+  height: calc(100% + 9px);
+}
+.btn-3d-stripe .stripe-border::before {
+  border: 3px solid var(--stripe-color-1);
+}
+
+/*# sourceMappingURL=index.css.map */

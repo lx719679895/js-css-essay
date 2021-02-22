@@ -1,0 +1,42 @@
+.box {
+  width: 600px;
+  height: 800px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-content: space-between;
+}
+
+.item {
+  /* flex: 1; */
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  /* color: #fff; */
+}
+
+.item1 {
+  background-color: red;
+}
+
+.item2 {
+  background-color: darkgoldenrod;
+  /* flex: 0 0 200px; */
+}
+
+.item3 {
+  background-color: yellowgreen;
+
+}
+
+
+.item4 {
+  background-color: chocolate;
+}
+
+.item5 {
+  background-color: salmon;
+}
+
+.item6 {
+  background-color: aqua;
+}

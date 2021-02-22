@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+div{
+  writing-mode: vertical-rl;
+  letter-spacing: 1px;
+  padding: 20px;
+}
+div b{
+  text-combine-upright: all;
+  margin: 5px 0;
+}
