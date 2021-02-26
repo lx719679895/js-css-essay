@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防抖节流</title>
+</head>
+<body>
+  <button id="debounce">防抖</button>
+  <button id="throttle">节流</button>
+  <script src="index.js"></script>
+  <script>
+    window.onload = function () {
+      document.getElementById('throttle').onclick = throttle(() => {
+        console.log('节流');
+      }, 500)
+      document.getElementById('debounce').onclick = debounce(() => {
+        console.log('防抖');
+      }, 500)
+    }
+  </script>
+</body>
+</html>
